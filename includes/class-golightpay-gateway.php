@@ -216,10 +216,10 @@ class GoLightPay_Gateway extends WC_Payment_Gateway
   {
     $order = wc_get_order($order_id);
 
-    wc_get_logger()->info(
-      'GoLightPay process_payment: ' . $order_id,
-      ['source' => 'golightpay']
-    );
+    // wc_get_logger()->info(
+    //   'GoLightPay process_payment: ' . $order_id,
+    //   ['source' => 'golightpay']
+    // );
 
     if (! $order) {
       return array(
@@ -235,15 +235,15 @@ class GoLightPay_Gateway extends WC_Payment_Gateway
     $currency = $order->get_currency();
     $tokens   = $api->get_available_tokens($currency);
 
-    wc_get_logger()->info(
-      'GoLightPay get_currency: ' . $order->get_currency(),
-      ['source' => 'golightpay']
-    );
+    // wc_get_logger()->info(
+    //   'GoLightPay get_currency: ' . $order->get_currency(),
+    //   ['source' => 'golightpay']
+    // );
 
-    wc_get_logger()->info(
-      'GoLightPay tokens: ' . print_r($tokens, true),
-      ['source' => 'golightpay']
-    );
+    // wc_get_logger()->info(
+    //   'GoLightPay tokens: ' . print_r($tokens, true),
+    //   ['source' => 'golightpay']
+    // );
 
     if (is_wp_error($tokens)) {
       wc_add_notice(__('Failed to get available tokens', 'woocommerce-golightpay'), 'error');
@@ -264,10 +264,10 @@ class GoLightPay_Gateway extends WC_Payment_Gateway
     );
 
     $invoice = $api->create_invoice($invoice_data);
-    wc_get_logger()->info(
-      'GoLightPay create_invoice: ' . print_r($invoice, true),
-      ['source' => 'golightpay']
-    );
+    // wc_get_logger()->info(
+    //   'GoLightPay create_invoice: ' . print_r($invoice, true),
+    //   ['source' => 'golightpay']
+    // );
     if (is_wp_error($invoice)) {
       wc_add_notice($invoice->get_error_message(), 'error');
       return array(
@@ -311,9 +311,18 @@ class GoLightPay_Gateway extends WC_Payment_Gateway
    */
   public function auto_configure_webhook()
   {
+    $this->init_settings();
+    $this->api_key          = $this->get_option('api_key', '');
+    $this->api_key_testnet  = $this->get_option('api_key_testnet', '');
+    $this->testmode         = $this->get_option('testmode', 'no');
+
     $api_key = $this->get_api_key();
 
     if (empty($api_key)) {
+      wc_get_logger()->info(
+        'GoLightPay auto_configure_webhook: API key is empty',
+        ['source' => 'golightpay']
+      );
       return;
     }
 

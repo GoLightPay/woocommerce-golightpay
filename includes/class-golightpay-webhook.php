@@ -31,10 +31,10 @@ class GoLightPay_Webhook
 		$data = json_decode($raw_body, true);
 
 		// Log webhook received
-		wc_get_logger()->info(
-			'GoLightPay webhook received',
-			array('source' => 'golightpay-webhook')
-		);
+		// wc_get_logger()->info(
+		// 	'GoLightPay webhook received',
+		// 	array('source' => 'golightpay-webhook')
+		// );
 
 		// Get headers (support multiple methods)
 		$signature = $this->get_header('X-LightPay-Signature');
@@ -43,23 +43,23 @@ class GoLightPay_Webhook
 		$timestamp = $this->get_header('X-LightPay-Timestamp');
 
 		// Log request data
-		wc_get_logger()->info(
-			'GoLightPay webhook headers: ' . print_r(
-				array(
-					'signature'  => $signature,
-					'event_type' => $event_type,
-					'event_id'   => $event_id,
-					'timestamp'  => $timestamp,
-				),
-				true
-			),
-			array('source' => 'golightpay-webhook')
-		);
+		// wc_get_logger()->info(
+		// 	'GoLightPay webhook headers: ' . print_r(
+		// 		array(
+		// 			'signature'  => $signature,
+		// 			'event_type' => $event_type,
+		// 			'event_id'   => $event_id,
+		// 			'timestamp'  => $timestamp,
+		// 		),
+		// 		true
+		// 	),
+		// 	array('source' => 'golightpay-webhook')
+		// );
 
-		wc_get_logger()->info(
-			'GoLightPay webhook payload: ' . print_r($data, true),
-			array('source' => 'golightpay-webhook')
-		);
+		// wc_get_logger()->info(
+		// 	'GoLightPay webhook payload: ' . print_r($data, true),
+		// 	array('source' => 'golightpay-webhook')
+		// );
 
 		// 1. Verify webhook signature
 		if (!$this->verify_signature($raw_body, $signature, $timestamp)) {
@@ -284,10 +284,10 @@ class GoLightPay_Webhook
 	 */
 	private function handle_invoice_paid($order, $data)
 	{
-		wc_get_logger()->info(
-			'GoLightPay webhook: Invoice paid for order #' . $order->get_id(),
-			array('source' => 'golightpay-webhook')
-		);
+		// wc_get_logger()->info(
+		// 	'GoLightPay webhook: Invoice paid for order #' . $order->get_id(),
+		// 	array('source' => 'golightpay-webhook')
+		// );
 
 		// Update order status to processing
 		$order->update_status(
@@ -320,10 +320,10 @@ class GoLightPay_Webhook
 	 */
 	private function handle_invoice_expired($order, $data)
 	{
-		wc_get_logger()->info(
-			'GoLightPay webhook: Invoice expired for order #' . $order->get_id(),
-			array('source' => 'golightpay-webhook')
-		);
+		// wc_get_logger()->info(
+		// 	'GoLightPay webhook: Invoice expired for order #' . $order->get_id(),
+		// 	array('source' => 'golightpay-webhook')
+		// );
 
 		// Only cancel if order is still pending
 		if ($order->has_status(array('pending', 'on-hold'))) {
