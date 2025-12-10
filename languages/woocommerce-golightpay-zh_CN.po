@@ -1,0 +1,136 @@
+# Translation file for GoLightPay WooCommerce Plugin
+# Copyright 2025 GoLightPay
+msgid ""
+msgstr ""
+"Project-Id-Version: GoLightPay for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: includes/class-golightpay-gateway.php:54
+msgid "GoLightPay"
+msgstr "GoLightPay"
+
+#: includes/class-golightpay-gateway.php:55
+msgid "Accept crypto stablecoin payments via GoLightPay"
+msgstr "通过 GoLightPay 接受加密货币稳定币支付"
+
+#: includes/class-golightpay-gateway.php:87
+msgid "Enable/Disable"
+msgstr "启用/禁用"
+
+#: includes/class-golightpay-gateway.php:89
+msgid "Enable GoLightPay"
+msgstr "启用 GoLightPay"
+
+#: includes/class-golightpay-gateway.php:93
+msgid "Title"
+msgstr "标题"
+
+#: includes/class-golightpay-gateway.php:95
+msgid "Payment method title shown to customers"
+msgstr "向客户显示的支付方式标题"
+
+#: includes/class-golightpay-gateway.php:99
+msgid "Description"
+msgstr "描述"
+
+#: includes/class-golightpay-gateway.php:101
+msgid "Payment method description shown to customers"
+msgstr "向客户显示的支付方式描述"
+
+#: includes/class-golightpay-gateway.php:105
+msgid "API Key (Production)"
+msgstr "API 密钥（生产环境）"
+
+#: includes/class-golightpay-gateway.php:107
+msgid "Your GoLightPay production API key"
+msgstr "您的 GoLightPay 生产环境 API 密钥"
+
+#: includes/class-golightpay-gateway.php:111
+msgid "API Key (Testnet)"
+msgstr "API 密钥（测试网）"
+
+#: includes/class-golightpay-gateway.php:113
+msgid "Your GoLightPay testnet API key"
+msgstr "您的 GoLightPay 测试网 API 密钥"
+
+#: includes/class-golightpay-gateway.php:117
+msgid "Test Mode"
+msgstr "测试模式"
+
+#: includes/class-golightpay-gateway.php:119
+msgid "Enable test mode"
+msgstr "启用测试模式"
+
+#: includes/class-golightpay-gateway.php:194
+msgid "Failed to get available tokens"
+msgstr "获取可用代币失败"
+
+#: includes/class-golightpay-gateway.php:206
+msgid "Order #%s"
+msgstr "订单 #%s"
+
+#: woocommerce-golightpay.php:237
+msgid "Invalid order."
+msgstr "无效订单。"
+
+#: woocommerce-golightpay.php:244
+msgid "Order not found."
+msgstr "未找到订单。"
+
+#: woocommerce-golightpay.php:250
+msgid "You do not have permission to view this order."
+msgstr "您没有权限查看此订单。"
+
+#: woocommerce-golightpay.php:256
+msgid "This order does not use GoLightPay payment method."
+msgstr "此订单未使用 GoLightPay 支付方式。"
+
+#: woocommerce-golightpay.php:264
+msgid "Payment invoice not found. Please contact support."
+msgstr "未找到支付发票。请联系支持。"
+
+#: woocommerce-golightpay.php:273
+msgid "Payment gateway not available."
+msgstr "支付网关不可用。"
+
+#: woocommerce-golightpay.php:345
+msgid "GoLightPay for WooCommerce"
+msgstr "GoLightPay for WooCommerce"
+
+#: woocommerce-golightpay.php:346
+msgid "requires WooCommerce to be installed and active."
+msgstr "需要安装并激活 WooCommerce。"
+
+#: templates/payment-page.php:19
+msgid "Payment - Order #%s"
+msgstr "支付 - 订单 #%s"
+
+#: includes/class-golightpay-gateway.php:62
+msgid "Pay with crypto stablecoins"
+msgstr "加密稳定币付款"
+
+#: includes/class-golightpay-gateway.php:62
+msgid "Pay with crypto stablecoins via GoLightPay. Supports multiple networks and tokens."
+msgstr "通过 GoLightPay 使用加密货币稳定币支付。支持多种网络和代币。"
+
+#: woocommerce-golightpay.php:389
+msgid "View Pricing & Fees"
+msgstr "查看定价与费用"
+
+#: woocommerce-golightpay.php:393
+msgid "View Documentation"
+msgstr "查看文档"
+
+#: woocommerce-golightpay.php:397
+msgid "Get Support"
+msgstr "获取支持"
+

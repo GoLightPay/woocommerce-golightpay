@@ -1,0 +1,21 @@
+# WordPress
+.DS_Store
+*.log
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build
+dist/
+build/
+

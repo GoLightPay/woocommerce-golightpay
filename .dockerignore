@@ -1,0 +1,10 @@
+node_modules/
+vendor/
+.git/
+.gitignore
+*.log
+.DS_Store
+*.swp
+*.swo
+*~
+

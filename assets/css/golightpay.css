@@ -1,0 +1,90 @@
+/**
+ * GoLightPay Styles
+ *
+ * @package WooCommerce_GoLightPay
+ */
+
+ .golightpay-payment-icon, .woocommerce #payment ul.payment_methods li img {
+  max-height: 32px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.golightpay-payment {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.golightpay-amount {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.golightpay-amount h2 {
+	font-size: 2.5em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.golightpay-network-selection {
+	margin-bottom: 30px;
+}
+
+.golightpay-network-selection h3 {
+	margin-bottom: 15px;
+	font-size: 1.2em;
+}
+
+.golightpay-payment-options {
+	text-align: center;
+}
+
+/* Payment Page Styles - Only applies to payment page */
+body.golightpay-payment-body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 3rem 1rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size: initial !important;
+}
+
+.golightpay-payment-page {
+	width: min(640px, 100%);
+	margin: 0 auto;
+}
+
+.golightpay-order-info {
+	text-align: center;
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #eee;
+}
+
+.golightpay-order-info h1 {
+	margin: 0 0 10px 0;
+	font-size: 2em;
+}
+
+.golightpay-order-info .order-number {
+	color: #666;
+	font-size: 0.9em;
+	margin: 0 0 20px 0;
+}
+
+.golightpay-order-info .order-amount h2 {
+	margin: 0;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+.golightpay-network-selection .description {
+	color: #666;
+	font-size: 0.9em;
+	margin-top: 5px;
+}
+
